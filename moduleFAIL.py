@@ -1,5 +1,6 @@
 import os
 from gtts import gTTS
+import random
 
 def failist_lugemine(f:str,l:list):
 	fail=open(f,"r",encoding="utf-8-sig") #encoding="utf-8-sig"
@@ -48,3 +49,10 @@ def correction(sona:str,l:list):
 			l.insert(i,uus_sona)
 			l.remove(sona)
 	return l
+
+
+def cntr_trnsl(word:str,spisk:list):
+	a=True
+	if word not in spisk:
+		a=False
+	return a
